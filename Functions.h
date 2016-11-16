@@ -9,6 +9,7 @@
 #include <sstream>
 #include "Person.h"
 #include "Songs.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -23,6 +24,8 @@ int RandomNumber(int x);
 string removeExtraSpaces(string name);
 
 Song* readSongsFiles(string line);
+
+unsigned short int readInt(int minValue, int  maxValue);
 
 
 #endif

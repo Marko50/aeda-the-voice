@@ -101,3 +101,21 @@ bool comp(pair<Participant*, float> p1,pair<Participant*, float> p2)
 	return p1.second < p2.second;
 }
 
+unsigned short int readInt(int minValue, int  maxValue){
+	bool gotInt;
+	int number;
+	string line;
+	char *chk;
+
+	while(!gotInt) {
+		getline(cin, line);
+		number = (int) strtol (line.c_str(), &chk, 10);
+
+		if (*chk == '\0' || isspace (*chk))
+			gotInt = true;
+
+		if(number < minValue || number > maxValue)
+			cout << "ERROR: Out of range value, please insert a value between " << minValue << "-" << maxValue << ": ";
+	}
+	return number;
+}
