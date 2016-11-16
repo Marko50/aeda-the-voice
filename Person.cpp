@@ -25,7 +25,15 @@ string Person :: getName() const
 	return name;
 }
 
+bool Person :: operator == (Person p1)
+{
+	if(p1.getName() == name && p1.getAge() == age)
+	{
+		return true;
+	}
 
+	return false;
+}
 //Participant
 
 Participant::Participant(unsigned int a, string n,string c,unsigned int p, unsigned int s, unsigned int v) : Person(a,n)
