@@ -27,4 +27,6 @@ Song* readSongsFiles(string line);
 
 unsigned int readInt(int minValue, int  maxValue);
 
+void titulo();
+
 #endif
