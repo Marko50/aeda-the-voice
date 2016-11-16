@@ -24,12 +24,32 @@ int main() {
 	m1.FirstPrint();
 	m1.SecondPrint(c1);
 	m1.ThirdPrint(c1);
+
 	cout << endl;
 	/*
 	cout << c1.getMentors().at(0)->getParticipants().size() << endl;
 	cout << c1.getMentors().at(1)->getParticipants().size() << endl;
 	cout << c1.getMentors().at(2)->getParticipants().size() << endl;
 	cout << c1.getMentors().at(3)->getParticipants().size() << endl;
+
+	while(true)
+	{
+		if
+			while()
+			if
+			if
+			if
+			if
+			if
+				break;
+
+
+
+		if
+		if
+	}
+
+
 	*/
 
 	return 0;

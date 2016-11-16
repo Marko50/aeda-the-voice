@@ -101,8 +101,8 @@ bool comp(pair<Participant*, float> p1,pair<Participant*, float> p2)
 	return p1.second < p2.second;
 }
 
-unsigned short int readInt(int minValue, int  maxValue){
-	bool gotInt;
+unsigned int readInt(int minValue, int  maxValue){
+	bool gotInt = false;
 	int number;
 	string line;
 	char *chk;
@@ -116,18 +116,18 @@ unsigned short int readInt(int minValue, int  maxValue){
 		gotInt = true;
 
 		else
-			throw MenuException();
+			throw Menu::InvalidMenuOption();
 
 		if(gotInt && (number < minValue || number > maxValue)) {
 			gotInt = false;
-			throw MenuException();
+			throw Menu::InvalidMenuOption();
 		}
 
 	}
 
-	catch(MenuException &A)
+	catch(Menu::InvalidMenuOption &A)
 	{
-		A.Msg();
+		A.ErrorMsg();
 	}
 
 

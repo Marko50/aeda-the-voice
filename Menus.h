@@ -29,10 +29,10 @@ public:
 	{
 	public:
 		void ErrorMsg(){
-			cout << "Invalid menu option! Please choose a valid one!\n";
+			cout << "Invalid option! Please choose a valid one!\n";
 		}
 	};
-	string FirstPrint();
+	int FirstPrint();
 	void SecondPrint(Competition &c1);
 	void ThirdPrint(Competition &c1);
 	void FourthPrint(Competition &c1);

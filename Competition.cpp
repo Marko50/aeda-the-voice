@@ -16,6 +16,14 @@ using namespace std;
 /*Competition::Competition(int y){
 	this->year=y;}
 */
+void Competition ::setInitial(vector<Participant*> p)
+{
+	for(unsigned int i = 0; i < p.size(); i++)
+	{
+		Initialparticipants.push_back(p.at(i));
+	}
+}
+
 int Competition::getYear() const{
 	return year;}
 

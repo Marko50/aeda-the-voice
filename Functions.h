@@ -9,7 +9,6 @@
 #include <sstream>
 #include "Person.h"
 #include "Songs.h"
-#include <stdlib.h>
 #include "Menus.h"
 
 using namespace std;
@@ -26,7 +25,6 @@ string removeExtraSpaces(string name);
 
 Song* readSongsFiles(string line);
 
-unsigned short int readInt(int minValue, int  maxValue);
-
+unsigned int readInt(int minValue, int  maxValue);
 
 #endif

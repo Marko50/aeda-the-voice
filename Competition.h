@@ -21,7 +21,7 @@ using namespace std;
 class Competition {
 	int year;
 	vector <Participant*> participants;
-	const vector <Participant*> Initialparticipants;
+	vector <Participant*> Initialparticipants;
 	vector <Mentor*> mentors;
 	vector <Phase*> phases;
 	vector <Host*> hosters;
@@ -43,6 +43,7 @@ public:
 	void addPhases(Phase *ph);
 	void addHosts(Host*h);
 	void addSongs(Song *s);
+	void setInitial(vector<Participant*> p);
 
 
 };
