@@ -107,15 +107,30 @@ unsigned short int readInt(int minValue, int  maxValue){
 	string line;
 	char *chk;
 
-	while(!gotInt) {
+	while (!gotInt) {
 		getline(cin, line);
-		number = (int) strtol (line.c_str(), &chk, 10);
-
+		number = (int) strtol(line.c_str(), &chk, 10);
+	try
+	{
 		if (*chk == '\0' || isspace (*chk))
-			gotInt = true;
+		gotInt = true;
 
-		if(number < minValue || number > maxValue)
-			cout << "ERROR: Out of range value, please insert a value between " << minValue << "-" << maxValue << ": ";
+		else
+			throw MenuException();
+
+		if(gotInt && (number < minValue || number > maxValue)) {
+			gotInt = false;
+			throw MenuException();
+		}
+
+	}
+
+	catch(MenuException &A)
+	{
+		A.Msg();
+	}
+
+
 	}
 	return number;
 }
