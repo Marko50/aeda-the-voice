@@ -48,6 +48,7 @@ public:
 	};
 	string getName() const;
 	unsigned int getAge() const;
+	bool operator ==(Person p1);
 };
 
 class Phase;
